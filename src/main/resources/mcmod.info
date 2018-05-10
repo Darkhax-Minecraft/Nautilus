@@ -1,0 +1,13 @@
+[
+    {
+        "modid": "nautilus",
+        "name": "Nautilus Lib",
+        "description": "A mixin mod for Minecraft Forge that aims to expand the capabilities of the base game.",
+        "version": "${version}",
+        "url": "https://github.com/Darkhax-Minecraft/Nautilus",
+        "authorList": [
+            "darkhax"
+        ],
+        "credits": ""
+    }
+]
