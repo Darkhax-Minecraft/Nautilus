@@ -7,10 +7,9 @@ import javax.annotation.Nullable;
 import org.spongepowered.asm.launch.MixinBootstrap;
 import org.spongepowered.asm.mixin.Mixins;
 
-import net.minecraftforge.common.ForgeVersion;
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
 
-@IFMLLoadingPlugin.MCVersion(ForgeVersion.mcVersion)
+@IFMLLoadingPlugin.MCVersion("1.12.2")
 @IFMLLoadingPlugin.SortingIndex(-5000)
 @IFMLLoadingPlugin.TransformerExclusions("net.darkhax.nautilus")
 public class NautilusLoadingPlugin implements IFMLLoadingPlugin {

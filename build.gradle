@@ -90,10 +90,16 @@ repositories {
     maven { 
 	    url = 'http://repo.spongepowered.org/maven'
 	}
+	
+	maven {
+
+        url 'https://maven.mcmoddev.com'
+    }
 }
 
 dependencies {
 
+    deobfCompile "net.darkhax.bookshelf:Bookshelf-1.12.2:${version_bookshelf}"
     embed("org.spongepowered:mixin:0.7.8-SNAPSHOT") { transitive = false }
 }
 

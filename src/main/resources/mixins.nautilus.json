@@ -6,10 +6,12 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [
       "common.MixinItemHoe",
-	  "common.MixinItemShears"
+	  "common.MixinItemShears",
+	  "common.MixinAbstractHorse"
   ],
   "client": [
       "client.MixinRenderItem",
-	  "client.MixinLayerArmorBase"
+	  "client.MixinLayerArmorBase",
+	  "client.MixinItem"
   ]
 }
