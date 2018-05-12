@@ -19,7 +19,7 @@ public class MixinLayerArmorBase {
     
     private static ItemStack lastArmor = ItemStack.EMPTY;
     
-    @Inject(method = "renderArmorLayer(Lnet/minecraft/entity/EntityLivingBase;FFFFFFFLnet/minecraft/inventory/EntityEquipmentSlot;)V", at = @At(value = "INVOKE_ASSIGN", target = "getItemStackFromSlot(Lnet/minecraft/inventory/EntityEquipmentSlot;)Lnet/minecraft/item/ItemStack;"), locals = LocalCapture.CAPTURE_FAILSOFT)
+    @Inject(method = "renderArmorLayer(Lnet/minecraft/entity/EntityLivingBase;FFFFFFFLnet/minecraft/inventory/EntityEquipmentSlot;)V", at = @At(value = "INVOKE_ASSIGN", target = "net.minecraft.entity.EntityLivingBase.getItemStackFromSlot(Lnet/minecraft/inventory/EntityEquipmentSlot;)Lnet/minecraft/item/ItemStack;"), locals = LocalCapture.CAPTURE_FAILSOFT)
     private void onArmorRendered (EntityLivingBase entityLivingBaseIn, float arg1, float arg2, float arg3, float arg4, float arg5, float arg6, float arg7, EntityEquipmentSlot slotIn, CallbackInfo ci, ItemStack itemstack) {
         
         lastArmor = itemstack;
