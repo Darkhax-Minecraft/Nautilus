@@ -3,6 +3,7 @@ package net.darkhax.nautilus.mixins.common;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 
+import net.darkhax.nautilus.ConfigurationHandler;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemHoe;
 
@@ -15,6 +16,6 @@ public abstract class MixinItemHoe extends Item {
     @Override
     public int getItemEnchantability () {
         
-        return this.toolMaterial.getEnchantability();
+        return ConfigurationHandler.enchantableHoes ? this.toolMaterial.getEnchantability() : super.getItemEnchantability();
     }
 }

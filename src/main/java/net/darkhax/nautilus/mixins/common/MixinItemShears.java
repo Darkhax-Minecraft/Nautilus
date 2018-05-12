@@ -2,6 +2,7 @@ package net.darkhax.nautilus.mixins.common;
 
 import org.spongepowered.asm.mixin.Mixin;
 
+import net.darkhax.nautilus.ConfigurationHandler;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemShears;
 
@@ -11,6 +12,6 @@ public class MixinItemShears extends Item {
     @Override
     public int getItemEnchantability () {
         
-        return 14;
+        return ConfigurationHandler.enchantableShears ? ToolMaterial.IRON.getEnchantability() : super.getItemEnchantability();
     }
 }
