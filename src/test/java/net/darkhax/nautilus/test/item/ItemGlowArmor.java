@@ -6,6 +6,7 @@ import net.darkhax.nautilus.client.item.IEnchantmentGlow;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.Optional;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -24,6 +25,8 @@ public class ItemGlowArmor extends ItemArmor implements IEnchantmentGlow {
     }
     
     @Override
+    @SideOnly(Side.CLIENT)
+    @Optional.Method(modid = "nautilus")
     public int getItemGlow (ItemStack stack, int originalColor) {
         
         return Color.green.darker().darker().getRGB();
