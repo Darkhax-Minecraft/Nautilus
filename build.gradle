@@ -113,7 +113,7 @@ jar {
     manifest.attributes(
 	    "TweakClass": "org.spongepowered.asm.launch.MixinTweaker",
         "MixinConfigs": "mixins.nautilus.json",
-        "FMLCorePlugin": "net.darkhax.nautilus.VanillaFixCoreMod"
+        "FMLCorePlugin": "net.darkhax.nautilus.NautilusLoadingPlugin"
  	)
 }
 
