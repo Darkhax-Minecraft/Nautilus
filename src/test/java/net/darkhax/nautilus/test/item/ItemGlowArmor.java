@@ -10,6 +10,7 @@ import net.minecraftforge.fml.common.Optional;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+@Optional.Interface(modid = "nautilus", iface = "net.darkhax.nautilus.client.item.IEnchantmentGlow")
 public class ItemGlowArmor extends ItemArmor implements IEnchantmentGlow {
     
     public ItemGlowArmor() {
