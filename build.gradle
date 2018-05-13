@@ -111,6 +111,8 @@ jar {
     }
     
     manifest.attributes(
+        "FMLCorePluginContainsFMLMod": "true",
+        "ForceLoadAsMod": "true",
 	    "TweakClass": "org.spongepowered.asm.launch.MixinTweaker",
         "MixinConfigs": "mixins.nautilus.json",
         "FMLCorePlugin": "net.darkhax.nautilus.NautilusLoadingPlugin"
