@@ -100,7 +100,7 @@ repositories {
 dependencies {
 
     deobfCompile "net.darkhax.bookshelf:Bookshelf-1.12.2:${version_bookshelf}"
-    embed("org.spongepowered:mixin:0.7.8-SNAPSHOT") { transitive = false }
+    embed("org.spongepowered:mixin:0.7.11-SNAPSHOT") { transitive = false }
 }
 
 jar {
