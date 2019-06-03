@@ -56,6 +56,11 @@ minecraft {
     replace '@VERSION@', project.version
     replace '@FINGERPRINT@', project.findProperty('signSHA1')
     replaceIn "${mod_class}.java"
+	
+	def args = ["-Dfml.coreMods.load=net.darkhax.nautilus.NautilusLoadingPlugin"]
+	
+    clientJvmArgs.addAll(args)
+    serverJvmArgs.addAll(args)
 }
 
 sourceSets {
