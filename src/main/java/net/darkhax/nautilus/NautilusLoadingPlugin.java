@@ -11,7 +11,6 @@ import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
 
 @IFMLLoadingPlugin.MCVersion("1.12.2")
 @IFMLLoadingPlugin.SortingIndex(-5000)
-@IFMLLoadingPlugin.TransformerExclusions("net.darkhax.nautilus")
 public class NautilusLoadingPlugin implements IFMLLoadingPlugin {
     
     public NautilusLoadingPlugin() {
