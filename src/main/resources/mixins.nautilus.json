@@ -5,9 +5,6 @@
   "minVersion": "0.6",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-      "common.MixinItemHoe",
-	  "common.MixinItemShears",
-	  "common.MixinAbstractHorse",
 	  "common.entity.MixinEntityItem"
   ],
   "client": [
