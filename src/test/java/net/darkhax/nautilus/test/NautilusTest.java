@@ -16,32 +16,32 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 @Mod(modid = "nautilustest", name = "NautilusTest", version = "@VERSION@")
 @EventBusSubscriber(modid = "nautilustest")
 public class NautilusTest {
-    
+
     private static final RegistryHelper REGISTRY = new RegistryHelper("nautilustest").setTab(CreativeTabs.MISC).enableAutoRegistration();
-    
+
     @EventHandler
     public void onPreInit (FMLPreInitializationEvent event) {
-        
+
         REGISTRY.registerItem(new ItemGlowArmor(), "glow_armor");
     }
-    
+
     @SubscribeEvent
-    public static void onItemKilled(ItemDeathEvent event) {
-    	
-    	final ItemStack item = event.getItemEntity().getItem();
-    	
-    	if (!item.isEmpty()) {
-    		
-    		if (event.getDamageSource().isFireDamage() && EnchantmentHelper.getEnchantmentLevel(Enchantments.FIRE_PROTECTION, item) > 0) {
-    			
-    			event.setCanceled(true);
-    			event.getItemEntity().extinguish();
-    		}
-    		
-    		else if (event.getDamageSource().isExplosion() && EnchantmentHelper.getEnchantmentLevel(Enchantments.BLAST_PROTECTION, item) > 0) {
-    			
-    			event.setCanceled(true);
-    		}
-    	}
+    public static void onItemKilled (ItemDeathEvent event) {
+
+        final ItemStack item = event.getItemEntity().getItem();
+
+        if (!item.isEmpty()) {
+
+            if (event.getDamageSource().isFireDamage() && EnchantmentHelper.getEnchantmentLevel(Enchantments.FIRE_PROTECTION, item) > 0) {
+
+                event.setCanceled(true);
+                event.getItemEntity().extinguish();
+            }
+
+            else if (event.getDamageSource().isExplosion() && EnchantmentHelper.getEnchantmentLevel(Enchantments.BLAST_PROTECTION, item) > 0) {
+
+                event.setCanceled(true);
+            }
+        }
     }
 }

@@ -8,10 +8,10 @@ import net.minecraft.item.ItemStack;
 
 @Mixin(Item.class)
 public class MixinItem implements IEnchantmentGlow {
-    
+
     @Override
     public int getItemGlow (ItemStack stack, int originalColor) {
-        
+
         return originalColor;
     }
 }
